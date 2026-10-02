@@ -9,6 +9,10 @@ and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Repo infrastructure — fix: remove synced case data
+
+- Removed `cases/` (personal case records written here by an external sync job) and added `cases/` to `.gitignore`.
+
 ### Repo infrastructure — feat: prompt-refiner skill + UserPromptSubmit hook
 
 - Added `.claude/skills/prompt-refiner/SKILL.md`, which reads each prompt, works out the intent behind it, and rewrites it as a precise instruction before Claude acts on it.
