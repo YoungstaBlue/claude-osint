@@ -9,6 +9,10 @@ and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Repo infrastructure — ci: pin shellcheck action
+
+- Pinned `ludeeus/action-shellcheck` to the 2.0.0 commit SHA instead of the moving `master` branch.
+
 ### Repo infrastructure — fix: remove synced case data
 
 - Removed `cases/` (personal case records written here by an external sync job) and added `cases/` to `.gitignore`.
