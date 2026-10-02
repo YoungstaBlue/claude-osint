@@ -56,3 +56,6 @@ node_modules/
 # Local sync artifacts
 *.local.md
 *.synced
+
+# Confidential case data must never be committed here
+cases/
