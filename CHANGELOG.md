@@ -9,6 +9,24 @@ and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Repo infrastructure — feat: law skill pack
+
+- Added 100 Missouri and federal litigation skills under `.claude/skills/` (index: `docs/law-skills.md`). Each ends with a verification step: pull verbatim statute text and confirm case law is still good law before relying on it.
+
+### Repo infrastructure — ci: pin shellcheck action
+
+- Pinned `ludeeus/action-shellcheck` to the 2.0.0 commit SHA instead of the moving `master` branch.
+
+### Repo infrastructure — fix: remove synced case data
+
+- Removed `cases/` (personal case records written here by an external sync job) and added `cases/` to `.gitignore`.
+
+### Repo infrastructure — feat: prompt-refiner skill + UserPromptSubmit hook
+
+- Added `.claude/skills/prompt-refiner/SKILL.md`, which reads each prompt, works out the intent behind it, and rewrites it as a precise instruction before Claude acts on it.
+- Added `.claude/hooks/prompt-refiner.py` and `.claude/settings.json` so the skill runs on every substantive prompt. Slash commands, `!raw …` and short replies such as "yes" are skipped.
+- Added `.claude/install-prompt-refiner-global.sh` to install the skill and hook into `~/.claude` for all projects.
+
 ### `offensive-osint` — feat: HackerOne hacktivity reference agent (§29.3)
 
 - Added `skills/offensive-osint/scripts/h1_reference.py` — stdlib-only Python script (no API key required) that queries HackerOne's public GraphQL API for disclosed reports, surfacing community-validated findings during recon.
