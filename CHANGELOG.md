@@ -9,6 +9,10 @@ and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Repo infrastructure — feat: law skill pack
+
+- Added 100 Missouri and federal litigation skills under `.claude/skills/` (index: `docs/law-skills.md`). Each ends with a verification step: pull verbatim statute text and confirm case law is still good law before relying on it.
+
 ### Repo infrastructure — ci: pin shellcheck action
 
 - Pinned `ludeeus/action-shellcheck` to the 2.0.0 commit SHA instead of the moving `master` branch.
