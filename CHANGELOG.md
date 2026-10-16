@@ -9,6 +9,10 @@ and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Repo infrastructure — fix: unparseable SKILL.md frontmatter
+
+- Quoted the `description` values in `.claude/skills/qualified-immunity-analyzer/SKILL.md` and `.claude/skills/section-1983-claim-builder/SKILL.md`. An unquoted `: ` inside those descriptions made the YAML frontmatter invalid, so the skill pack could not be loaded.
+
 ### Repo infrastructure — feat: law skill pack
 
 - Added 100 Missouri and federal litigation skills under `.claude/skills/` (index: `docs/law-skills.md`). Each ends with a verification step: pull verbatim statute text and confirm case law is still good law before relying on it.

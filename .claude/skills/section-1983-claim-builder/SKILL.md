@@ -1,6 +1,6 @@
 ---
 name: section-1983-claim-builder
-description: Builds 42 U.S.C. 1983 civil-rights claims: color of state law, the constitutional violation, personal involvement, causation, capacity, and Monell municipal liability. Use for "1983 claim", "sue the police", "sue the city or county", "civil rights lawsuit", "Monell", or "official vs individual capacity".
+description: 'Builds 42 U.S.C. 1983 civil-rights claims: color of state law, the constitutional violation, personal involvement, causation, capacity, and Monell municipal liability. Use for "1983 claim", "sue the police", "sue the city or county", "civil rights lawsuit", "Monell", or "official vs individual capacity".'
 ---
 
 # Section 1983 Claim Builder

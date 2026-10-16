@@ -1,0 +1,37 @@
+# Base44 sandbox environment for this repository.
+#
+# This repo is a Claude Code skill pack: Markdown files, two standalone Python
+# helpers, no application, no build step. That is why an update here "fails to
+# start" — nothing in the repo listens on the preview port. `tools/preview/`
+# closes that gap by rendering the repository's own Markdown (README, docs/,
+# examples/, tests/ and every SKILL.md) on host port 3000.
+#
+# The source is bind-mounted and read per request, so edits show up on reload
+# without rebuilding anything. Run from the repo root:
+#   docker compose -f docker-compose.base44.yml up -d --build
+services:
+  preview:
+    image: python:3.12-slim
+    working_dir: /app
+    command:
+      - sh
+      - -ec
+      - pip install --no-cache-dir --quiet markdown==3.7 && exec python3 tools/preview/server.py
+    environment:
+      - PREVIEW_PORT=3000
+      - BASE44_PREVIEW_MODE
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+    restart: on-failure
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - -c
+        - import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:3000/', timeout=5).status == 200 else 1)
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 60s

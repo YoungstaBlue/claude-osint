@@ -1,6 +1,6 @@
 ---
 name: qualified-immunity-analyzer
-description: Analyzes qualified immunity in 1983 and Bivens cases: the two-prong test, clearly established law as of the conduct date, Eighth Circuit approach, and interlocutory appeals. Use for "qualified immunity", "clearly established law", "officer claims immunity", or opposing a QI motion.
+description: 'Analyzes qualified immunity in 1983 and Bivens cases: the two-prong test, clearly established law as of the conduct date, Eighth Circuit approach, and interlocutory appeals. Use for "qualified immunity", "clearly established law", "officer claims immunity", or opposing a QI motion.'
 ---
 
 # Qualified Immunity Analyzer
